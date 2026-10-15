@@ -1,0 +1,80 @@
+
+ #Creating a Modular Calculator Mini-Program
+
+def get_first_number():
+  return float(input("Enter the first number."))
+
+def get_second_number():
+  return float(input("Enter the second number."))
+
+def add_numbers(num1, num2):
+  sum = num1 + num2
+  return sum
+
+def subtract_numbers(num1, num2):
+  difference = num1 - num2
+  return difference
+
+def multiply_numbers(num1, num2):
+  product = num1 * num2
+  return product
+
+def divide_numbers(num1, num2):
+  if num2 == 0:
+    print("Error, cannot be divided by 0")
+  else:
+     quotient = num1 / num2
+     return quotient
+
+def get_operation():
+  print("Choose operation:")
+  print("1 - Addition")
+  print("2 - Subtraction")
+  print("3 - Multiplication")
+  print("4 - Division")
+  choice = input("Enter your choice (1/2/3/4):")
+  return choice
+
+def main():
+  num1 = get_first_number()
+  num2 = get_second_number()
+  choice = get_operation()
+  if choice == '1':
+     sum = add_numbers(num1, num2)
+     print (f"Result: {sum}")
+  elif choice == '2':
+    difference = subtract_numbers(num1, num2)
+    print (f"Result: {difference}")
+  elif choice == '3':
+    product = multiply_numbers(num1, num2)
+    print (f"Result: {product}")
+  elif choice == '4':
+    quotient = divide_numbers(num1, num2)
+    print (f"Result: {quotient}")
+  else:
+   print("Invalid, please choose between 1,2,3,4.")
+
+if __name__ == "__main__":
+  main()
+
+#**Reflection**
+
+###What functions did you create in your calculator program?
+* I made functions to get the first number, get the second number, pick what math to do, add, subtract, multiply, divide, and run the whole thing.
+###What parameters did your functions use?
+* The number-getting and menu functions didn't use any parameters, but the math functions used two parameters called num1 and num2
+###What arguments were passed when the functions were called?
+* I passed the variables num1 and num2 into the math functions when I called them so it knew what numbers to calculate.
+###How did your program use the returned value?
+* My program caught the answers that came back from the functions, saved them in variables, and then printed the final result on the screen for the user to see.
+###Why is it better to divide the calculator program into functions instead of writing everything in one long block of code?
+* It is way easier to read and fix mistakes because each little chunk has its own job instead of being one huge giant mess.
+
+
+
+
+
+
+
+
+
